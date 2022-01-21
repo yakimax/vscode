@@ -120,9 +120,9 @@ function getCategory(FileName)
         return "others";
 }
 
-function sendFiles(srcFilePath , dest , fileCategory){
+function sendFiles(srcFilePath , dest , FileCategory){
     // we will create path for each category type encountered to create folders of their names
-       let catPath = path.join(dest , fileCategory)
+       let catPath = path.join(dest , FileCategory)
  
         //D:\FJP4\test folder\organized_files\media
         //D:\FJP4 \test folder\organized_files\documents
