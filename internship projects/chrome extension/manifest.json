@@ -1,0 +1,28 @@
+{
+    "version" : "1.0" ,
+    "name" : "profile scrapper",
+    "manifest_version" : 2,
+    
+    
+
+    "description" : "linkdn profile scrapper",
+
+    "icons" : {
+        "128" : "png.png"
+    },
+
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["content.js"]
+        }
+    ],
+
+    "browser_action" : {
+        "default_popup" : "popup.html",
+        "default_title" : "linkdn scrapper"
+    }
+
+
+    
+}
