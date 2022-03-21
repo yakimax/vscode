@@ -1,5 +1,5 @@
 // let url = window.location.href;
-let url = 'https://www.linkedin.com/in/mahesh-babu-24496632/'
+let url = 'https://www.linkedin.com/in/guyandtheworld/?originalSubdomain=in'
 const request = require('request')
 const cheerio = require('cheerio')
 
@@ -24,8 +24,8 @@ function cb(error, response, html)
 function htmlReader(html)
 {
     let $ = cheerio.load(html);
-    let finder = $('.pv-top-card-profile-picture__image.pv-top-card-profile-picture__image--show.ember-view').attr('src').length;
-
+    let finder = ('.artdeco-card.ember-view.break-words.pb3.mt2');
+    let searched = finder.attr('section')
     console.log(finder)
 }
 
