@@ -52,6 +52,45 @@ body{
 }
 
 
+.modal-cont {
+    height: 50vh;
+    width: 45vw;
+    background: lightcoral;
+    position: absolute;
+    top: calc((100vh - 50vh) / 2);
+    left: calc((100vw - 45vw) / 2);
+    display:none;
+  }
+
+
+
+.textarea-cont {
+    height: 100%;
+    width: 75%;
+    outline: none;
+    border: none;
+    background-color: lightblue;
+    resize: none;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  
+  
+  .priority-colors-cont{
+         height: 100%;
+         width:25% ;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+  
+  
+  }
+  
+  .priority-color{
+         height: 3rem;
+         width: 5rem;
+  }
 
 
 .grey{
@@ -76,4 +115,13 @@ body{
    
     background-color: orange
 }
+
+
+
+
+
+.action-btn-cont>*:hover{
+    background-color: plum;
+}
+
 
