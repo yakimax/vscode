@@ -4,7 +4,11 @@
 interface Camera{
     void take_snap();
     void record_video();
+    private void greet(){
+        System.out.println("greetings to all");
+    }
     default void record_4k_video(){
+        greet();
         System.out.println("recording in 4k") ;
     }
 }
@@ -12,9 +16,7 @@ interface Camera{
 
 interface Wifi{
     public String[] get_network();
-    public void connect_to_network (String network) {
-        System.out.println("connecting to network " + network ) ;
-    }
+    public void connect_to_network (String network) ;
 }
 
 class Cell_phone{
@@ -39,6 +41,10 @@ class MySmartPhone extends Cell_phone implements Camera , Wifi {
         System.out.println("recording video") ;
     }
 
+    public void record_4k_video(){
+        System.out.println("recording in 4k now") ;
+    }
+
     public String[] get_network(){
         System.out.println("Getting list of networks") ;
         String[] network = { "shivam" , " gobi " , " aalu " , " lelo " } ;
@@ -53,13 +59,14 @@ class MySmartPhone extends Cell_phone implements Camera , Wifi {
 
 public class Java_interfaces{
 
-    public static void main(String args[]){
+    public static void main(String []args){
 
         MySmartPhone ms = new MySmartPhone(); 
-        String networks = ms.get_network();
+        String []networks = ms.get_network();
         for( String s : networks){
             System.out.println(s);
         }
         ms.record_4k_video() ;
+        // ms.greet();  --> throws an error private access.
     }
 }
