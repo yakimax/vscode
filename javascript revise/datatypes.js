@@ -1,38 +1,41 @@
-var variable = 'a' ;
+// var variable = `a` ;
 
 
-console.log(variable) ;
-
-var variable = "String" ;
-
-
-console.log(variable) ;
+// var variable = "String" ;
 
 
 
-let variable = 1 ;
+// let variable = 1 ;
 
 
 
-console.log(variable);
+// let variable = 1.22;
 
 
 
-let variable = 1.22;
-
-
-console.log(variable);
-
-
-// let var = react ;
+// let variable = react ;  // error
 
 
 
-console.log(variable);
+// let variable = undefined ;
+
+ 
+
+let obj = {
+    name : 'shivam',
+    number : 9907659693 
+}
 
 
 
+let arr = [1,2,'a',`string`,null,undefined,1.2];
 
-let variable = null ;
 
-console.log(variable);
+
+function fun(){
+    console.log("gobi aalu");
+}
+
+
+
+console.log(fun,typeof(fun)) ;
