@@ -21,21 +21,21 @@
 
  
 
-let obj = {
-    name : 'shivam',
-    number : 9907659693 
-}
+// let obj = {
+//     name : 'shivam',
+//     number : 9907659693 
+// }
 
 
 
-let arr = [1,2,'a',`string`,null,undefined,1.2];
+// let arr = [1,2,'a',`string`,null,undefined,1.2];
 
 
 
-function fun(){
-    console.log("gobi aalu");
-}
+// function fun(){
+//     console.log("gobi aalu");
+// }
 
+variable = 1 ;
 
-
-console.log(fun,typeof(fun)) ;
+console.log(variable,typeof(variable)) ;
