@@ -19,6 +19,9 @@
 // ans. promises are hold in microtask queue whereas callbacks are hold on callback stack or node API
 // microtask queue has the highest priority given by event loop second priority is for callback queue
 
+// to be done
+// promise callback serial behaviour
+// promise callback parallel behaviour
 
 
 
