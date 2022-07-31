@@ -1,7 +1,13 @@
+// Higher order functions
+// Map
+// map functions returns array object with required condition implementeed
+
+
+
 let arr = [1,2,3,4,5,6,7];
 
 let narr = arr.map(function(n){
-    return n*n ;
+    return n * n ;
 });
 console.log(arr);
 console.log(narr);
