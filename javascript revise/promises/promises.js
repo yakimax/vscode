@@ -25,26 +25,26 @@
 
 
 
-let fs = require('fs');
+let fs = require('fs') ;
 
 
 
-console.log('before');
+console.log('before') ;
 
 
 
-let promise = fs.promises.readFile("f1.txt");
+let promise = fs.promises.readFile("f1.txt") ;
 
 promise.then(function(data){
-    console.log("f1 file data - >" + data);
-});
+    console.log("f1 file data - >" + data) ;
+}) ;
 
 promise.catch(function(error){
-    console.log(error);
-});
+    console.log(error) ;
+}) ;
 
 
 
 
 
-console.log('after');
+console.log('after') ;
