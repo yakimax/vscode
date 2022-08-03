@@ -18,19 +18,19 @@ let browserWillLaunchPromise = puppeteer.launch({
 
 browserWillLaunchPromise
   .then(function (browserInstance) {
-    let newTabPromise = browserInstance.newPage();
-    return newTabPromise;
+    let newTabPromise = browserInstance.newPage() ;
+    return newTabPromise ;
     // new Page method will open a new Tab in the Browser
   })
   .then(function (newTab) {
-    page = newTab;
-    let websiteWillbeOpenedPromise = newTab.goto(loginLink);
+    page = newTab ;
+    let websiteWillbeOpenedPromise = newTab.goto(loginLink) ;
     return websiteWillbeOpenedPromise;
   })
   .then(function () {
     let emailWillbeEnteredPromise = page.type("input[id='input-1']", email, {
       delay: 100,
-    });
+    }) ;
     return emailWillbeEnteredPromise;
   })
   .then(function () {

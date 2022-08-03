@@ -47,10 +47,9 @@ browseropenInstance.then(function(browserOpnend){
     let questionselectAllarr = page.$$('.ui-btn.ui-btn-normal.primary-cta.ui-btn-line-primary.ui-btn-styled') ;
     return questionselectAllarr
 }).then(function(array){
-    // for( let i = 0 ; i < array.length ; i++ ){ 
-        let solvingallproblems = questionSolver(page,codes.answers[0],array[0]) ;
-        return solvingallproblems
-    // }
+    for( let i = 0 ; i < array.length ; i++ ){ 
+        questionSolver(page,codes.answers[i],array[i]) ;
+    }
 })
 
 
@@ -96,11 +95,19 @@ function questionSolver(thispage,answer,questionSelector){
             let pressVpromise = thispage.keyboard.press("V");
             return pressVpromise
         }).then(function(){
-            let releasingctr = thispage.keyboard.up("Control");
+            let releasingctr = thispage.keyboard.up("Control") ;
             return releasingctr
         }).then(function(){
-            return thispage.click('.hr-monaco__run-code');
-        }).then(function(){resolve()}).catch(function(){reject()})
+            return thispage.click('.hr-monaco__run-code') ;
+        }).then(function(){
+            let waitforcompile = thispage.waitForSelector('.status.compile-success') ;
+            return waitforcompile
+        }).then(function(){
+            let pressAltbutton = thispage.goBack() ;
+            return pressAltbutton
+        }).then(function(){
+            console.log('completed') ;
+        }).then(function(){resolve}).catch(function(){reject})
         // .then(function(){
         //     let submit = thispage.click('.ui-btn.ui-btn-normal.ui-btn-primary.pull-right.hr-monaco-submit.ui-btn-styled')
         //     return submit
