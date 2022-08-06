@@ -1,14 +1,14 @@
 class One {
-    int a ;
+    int a =1 ;
     void display(){
-        System.out.println("hello class one") ;
+        System.out.println(a + " " +"hello class one") ;
     }
 }
 
 class Two extends One {
-    int a ;
-    void display(){
-        System.out.println("hello class one") ;
+    int a =2;
+    void display1(){
+        System.out.println(a + " " + "hello class Two") ;
     }
 }
 
