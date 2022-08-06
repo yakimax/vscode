@@ -1,17 +1,17 @@
-package CodeForAdapterDesignPattern;
+package CodeForAdapterDesignPattern ;
 
-import java.util.List;
+import java.util.List ;
 
 // Data consumer
 public class Intranet {
-	IPhoneListSource source;
+	IPhoneListSource source ;
 	
-	public Intranet(IPhoneListSource source) {
-		this.source = source;
+	public Intranet(IPhoneListSource source) {            //constructor
+		this.source = source ;
 	}
 	
 	public void printPhoneNumbers() {
-		List<String> phones = this.source.GetPhoneNumbers();
-		System.out.println(phones);
+		List<String> phones = this.source.GetPhoneNumbers() ;
+		System.out.println(phones) ;
 	}
 }
