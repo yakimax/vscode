@@ -14,19 +14,34 @@ function coffeeOrder(order){
 
 function processOrder(instruction){
     return new Promise(function(resolve){
-        console.log('order is being processed') ;
-        resolve( 'coffee served') ;
+        console.log('your order is being processed') ;
+        resolve( `${instruction}` + ' served') ;
     }) ;
 }
 
 
 
-coffeeOrder('coffee').then(function(instructions){
-    console.log(instructions) ;
-    let processing = processOrder(instructions) ;
-    return processing
-}).then(function(cooked){
-    console.log(cooked)
-}).catch(function(err){
-    console.log(err) ;
-}) ;
+// coffeeOrder('coffee').then(function(instructions){
+//     console.log(instructions) ;
+//     let processing = processOrder(instructions) ;
+//     return processing
+// }).then(function(cooked){
+//     console.log(cooked)
+// }).catch(function(err){
+//     console.log(err) ;
+// }) ;
+
+
+
+async function serveOrder(){
+    try{
+        let placeorder = await coffeeOrder('coffee') ;
+        console.log(placeorder) ;
+        let processedorder = await processOrder('cofee') ;
+        console.log(processedorder) ;
+    }
+    catch(error){
+        console.log(error) ;
+    }
+}
+serveOrder() ;
