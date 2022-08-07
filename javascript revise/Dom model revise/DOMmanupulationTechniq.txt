@@ -16,7 +16,12 @@
     -innerHtml = '' ;
     -append() ;
     -appendchild() ;
-
+    -Node.removeChild() ;
+    -replaceChild() ;
+    -appendChild() ;
+    -insertBefore() ;
+    -hasChildNodes()
+    -createElementNS()
 .insertBefore(ele,nextEle) ;
 .setAttribute() ;
 .getAttribute() ;
@@ -35,7 +40,7 @@
 
 
 
-
+(Descriptions)------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
