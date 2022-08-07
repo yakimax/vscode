@@ -31,8 +31,15 @@
       //its alerted that red is clicked. Fix it
       let red = document.querySelector(".red") ;
       red.addEventListener("click", function (e) {
+        if(e.target == e.currentTarget){
         alert("red was clicked") ;
+        }
+        else{
+            alert('yellow is clicked') ;
+        }
       }) ;
+
+
     </script>
   </body>
 </html>
