@@ -33,33 +33,23 @@
       //   Solution :
 
       
-      let input = document.querySelector("#pass") ;
-      let text = document.querySelector("p") ;
+      let input = document.querySelector('#pass') ;
+      let para = document.querySelector('p') ;
+      
 
-      let isShift = false ;
 
-      input.addEventListener("keypress", function (e) {
-        if (e.getModifierState("CapsLock")) {
-          text.style.display = "block" ;
-          e.preventDefault() ;
-        } else {
-          text.style.display = "none" ;
+      input.addEventListener('keypress',function(e){
+        if(e.getModifierState("CapsLock")){
+            para.style.display = 'block' ;
         }
-
-        if (!isShift) e.preventDefault() ;///
-      }) ;
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key == "Shift") {
-          isShift = true ;
+        else{
+            para.style.display = 'none' ;
         }
-      }) ;
+      })
 
-      document.addEventListener("keyup", function (e) {
-        if (e.key == "Shift") {
-          isShift = false ;
-        }
-      }) ;
+
+
+
     </script>
   </body>
 </html>
