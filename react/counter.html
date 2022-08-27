@@ -12,11 +12,9 @@
 </head>
 
 <body>
-  <div id="root">
-    
+  < div id="root" >
   </div>
 </body>
-
 <script type="text/babel">
   class Counter extends React.Component {
     constructor() {
@@ -43,6 +41,7 @@
     render() {
       return (
         <>
+        <h2>hellow this count the clicks</h2>
           <h1>{this.state.count}</h1>
           <button onClick={this.increment}>+</button>
           <button onClick={this.decrement}>-</button>
