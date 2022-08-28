@@ -12,31 +12,31 @@
 </head>
 
 <body>
-  < div id="root" >
+  <div id="root"> huh
   </div>
 </body>
 <script type="text/babel">
   class Counter extends React.Component {
     constructor() {
-      super();
+      super() ;
 
       this.state = {
-        count: 0,
-      };
+        count: 0 ,
+      } ;
     }
 
     // Incerment
     increment = () => {
       this.setState({
-        count: this.state.count + 1,
-      });
-    };
+        count: this.state.count + 1 ,
+      }) ;
+    } ;
 
     decrement = () => {
       this.setState({
-        count: this.state.count - 1,
-      });
-    };
+        count: this.state.count - 1 ,
+      }) ;
+    } ;
 
     render() {
       return (
