@@ -4,7 +4,7 @@
 interface Camera{
     void take_snap();
     void record_video();
-    private void greet(){
+    static void greet(){
         System.out.println("greetings to all");
     }
     default void record_4k_video(){
@@ -31,7 +31,7 @@ class Cell_phone{
 
 }
 
-class MySmartPhone extends Cell_phone implements Camera , Wifi {
+   class MySmarPhone extends Cell_phone implements Camera , Wifi {
     
     public void take_snap(){
         System.out.println("taking snap") ;
